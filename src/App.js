@@ -1,6 +1,8 @@
 import './App.css';
 import Card from './components/Card.jsx'
+import Cards from './components/Cards.jsx'
 import { Rick } from './data.js'
+import characters from './data.js';
 
 function App() {
   return (
@@ -11,7 +13,14 @@ function App() {
       species={Rick.species}
       gender={Rick.gender}
       image={Rick.image}
-      onClose={()=>window.alert('Se cerro la card')}/>
+      onClose={()=>window.alert('Se cerro la card')}
+      />
+
+      <Cards
+      characters={characters}/>
+
+
+      
     </div>
   );
 }
