@@ -1,23 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import Card from './components/Card.jsx'
+import { Rick } from './data.js'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Proyecto de Rick And Morty</h1>
+      <Card
+      name={Rick.name}
+      species={Rick.species}
+      gender={Rick.gender}
+      image={Rick.image}
+      onClose={()=>window.alert('Se cerro la card')}/>
     </div>
   );
 }
