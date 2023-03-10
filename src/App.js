@@ -1,21 +1,12 @@
-import './App.css';
-import Card from './components/Card.jsx'
-import Cards from './components/Cards.jsx'
-import SearchBar from './components/SearchBar.jsx'
-import { Rick } from './data.js'
+import style from './App.module.css'
+import Cards from './components/Cards/Cards.jsx'
+import SearchBar from './components/SearchBar/SearchBar.jsx'
 import characters from './data.js';
 
 function App() {
   return (
-    <div className="App">
+    <div className={style.App}>
       <h1>Proyecto de Rick And Morty</h1>
-      <Card
-      name={Rick.name}
-      species={Rick.species}
-      gender={Rick.gender}
-      image={Rick.image}
-      onClose={()=>window.alert('Se cerro la card')}
-      />
 
       <Cards
       characters={characters}/>

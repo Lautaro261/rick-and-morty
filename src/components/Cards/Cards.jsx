@@ -1,4 +1,4 @@
-import Card from "./Card.jsx";
+import Card from "../Card/Card.jsx";
 // ESTE ES UN COMPONENTE CONTENEDER O SMART.          HAY LOGICA!!!
 
 export default function Cards (props){
@@ -7,7 +7,6 @@ export default function Cards (props){
 
     return(
         <div>
-            <h1>Soy Cardsss </h1>
             <ul>
                 {characters.map((personaje, index)=>{
                     return(
