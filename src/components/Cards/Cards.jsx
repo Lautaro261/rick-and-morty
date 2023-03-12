@@ -12,11 +12,12 @@ export default function Cards (props){
                     return(
                         <Card
                         key={index}
+                        id={personaje.id}
                         name={personaje.name}
                         species={personaje.species}
                         gender={personaje.gender}
                         image={personaje.image}
-                        onClose={()=>window.alert(`se borro ${personaje.name}`)}
+                        onClose={props.onClose}
                         />
                     )
                 })}
