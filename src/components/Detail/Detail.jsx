@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
+import { Link } from "react-router-dom"
 
 export default function Detail(){
 
@@ -25,6 +26,10 @@ export default function Detail(){
 
     return(
         <div>
+            <Link to="/home">
+            <button>back</button>
+            </Link>
+            
             {character.origin?(
                 <div>
                     <p>{character.name}</p>
