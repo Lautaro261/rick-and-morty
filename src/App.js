@@ -5,6 +5,7 @@ import Cards from "./components/Cards/Cards.jsx";
 import Navbar from "./components/Nav/Navbar.jsx";
 import About from "./components/About/About.jsx";
 import Detail from "./components/Detail/Detail.jsx";
+import Form from "./components/Form/Form.jsx"
 
 /* import characters from './data.js'; */
 
@@ -51,6 +52,7 @@ function App() {
 
       <Navbar onSearchBar={onSearchBar} />
       <Routes>
+        <Route path="/" element={<Form/>}/>
         <Route path="/home" element={<Cards onClose={onClose} characters={characters}/>}/>
         <Route path="/about" element={<About/>}/>
         <Route path="/detail/:detailId" element={<Detail/>}/>
